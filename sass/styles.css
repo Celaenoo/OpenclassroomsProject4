@@ -49,6 +49,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .logo-header {
@@ -61,6 +63,7 @@ body {
 .logo-header-restau {
   display: flex;
   align-self: flex-end;
+  justify-content: center;
 }
 .logo-header-menu {
   z-index: -1;
@@ -164,6 +167,9 @@ body {
   font-size: 16px;
   font-weight: 500;
 }
+.liste-fonctionnement:hover > .fa-solid {
+  color: #9356DC;
+}
 
 /* .fa-solid {
     display: flex;
@@ -175,7 +181,8 @@ body {
 }
 
 .fa-mobile-screen-button,
-.fa-list {
+.fa-list,
+.fa-store {
   color: #7E7E7E;
 }
 
@@ -188,7 +195,6 @@ body {
 }
 
 .fa-store {
-  color: #9356DC;
   font-size: 14px;
 }
 
@@ -216,6 +222,20 @@ body {
   border-radius: 15px 15px 0 0;
   /*object-fit: cover;   
   box-sizing: border-box;  */
+}
+.restau-card .nouveau {
+  color: #008766;
+  font-size: 14px;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+  position: absolute;
+  right: 30px;
+  margin-top: 14px;
+  padding-top: 7px;
+  border-radius: 2px;
+  background: var(--green, #99E2D0);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .restau-card h3,
 .restau-card p {
@@ -279,10 +299,12 @@ body {
 .menu-header {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .retour {
-  margin-left: 22px;
+  position: absolute;
+  left: 15px;
 }
 .retour i {
   font-size: 21px;
