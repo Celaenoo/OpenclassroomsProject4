@@ -70,4 +70,18 @@
 }
 .sous-titre-plat .prix-plat {
   font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-carte {
+    margin: -35px 150px;
+    padding: 10px 170px;
+  }
+  .menu-carte .h1 {
+    justify-content: center;
+  }
+  .menu-carte .h1 h1 {
+    padding-right: 30px;
+    font-size: 26px;
+  }
 }/*# sourceMappingURL=section-menu.css.map */

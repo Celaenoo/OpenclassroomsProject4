@@ -6,38 +6,13 @@
   padding-bottom: 20px;
 }
 
-.restau-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 18px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: black;
-  /* height: 251px; */
-}
-.restau-card img {
-  height: 170px;
-  border-radius: 15px 15px 0 0;
-  /*object-fit: cover;   
-  box-sizing: border-box;  */
-}
-.restau-card .nouveau {
-  color: #008766;
-  font-size: 14px;
-  text-align: center;
-  width: 80px;
-  height: 29px;
-  position: absolute;
-  right: 30px;
-  margin-top: 14px;
-  padding-top: 7px;
-  border-radius: 2px;
-  background: var(--green, #99E2D0);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
-.restau-card h3,
-.restau-card p {
-  padding-bottom: 4px;
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .restaurants h2 {
+    padding-bottom: 10px;
+    margin-left: 60px;
+  }
 }/*# sourceMappingURL=section-restaurant.css.map */

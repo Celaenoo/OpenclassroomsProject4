@@ -1,20 +1,21 @@
 // Base
-@import "./base/base.scss";
-@import "./base/typography.scss";
+@import "./base/base.css";
+@import "./base/typography.css";
 
 // Layout
 @import "./layout/header.scss";
-@import "./layout/section-fonctionnement.scss";
-@import "./layout/section-localisation.scss";
-@import "./layout/section-menu.scss";
-@import "./layout/footer.scss";
-@import "./layout/section-restaurant.scss";
+@import "./layout/section-fonctionnement.css";
+@import "./layout/section-localisation.css";
+@import "./layout/section-menu.css";
+@import "./layout/footer.css";
+@import "./layout/section-restaurant.css";
 
 //Abstract
-@import "./abstract/colors.scss";
+@import "./abstract/colors.css";
 
 
 // Components
-@import "./components/button.scss";
-@import "./components/card-content.scss";
-@import "./components/icone.scss";
+@import "./components/button.css";
+@import "./components/card-content.css";
+@import "./components/icone.css";
+@import "./components/restau-card.css"

@@ -74,3 +74,18 @@
         font-weight: 700; 
     }  
 }
+
+
+@media screen and (min-width: 1024px) {
+    .menu-carte {
+        margin: -35px 150px;
+        padding: 10px 170px;
+        .h1 {
+            justify-content: center;
+            h1 {
+                padding-right: 30px;
+                font-size: 26px;
+            }
+        }
+    }
+}

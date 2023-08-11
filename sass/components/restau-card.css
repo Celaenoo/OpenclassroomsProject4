@@ -1,0 +1,96 @@
+.restau-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 18px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: black;
+  /* height: 251px; */
+}
+.restau-card img {
+  height: 170px;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+.restau-card .nouveau {
+  color: #008766;
+  font-size: 14px;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+  position: absolute;
+  right: 30px;
+  margin-top: 14px;
+  padding-top: 7px;
+  border-radius: 2px;
+  background: var(--green, #99E2D0);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.restau-card h3,
+.restau-card p {
+  padding-bottom: 4px;
+}
+.restau-card input[type=checkbox] {
+  display: none;
+}
+.restau-card input[type=checkbox] + label {
+  display: inline-block;
+  cursor: pointer;
+}
+.restau-card .heart-icons {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.restau-card .heart-icon {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: -25px;
+  right: 10px;
+}
+.restau-card .empty,
+.restau-card #heart-checkbox-1:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-2:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-3:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-4:checked + label .heart-icon:last-child {
+  opacity: 1;
+}
+.restau-card .full,
+.restau-card #heart-checkbox-1:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-2:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-3:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-4:checked + label .heart-icon:first-child {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-restau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+    margin: 20px;
+    margin-bottom: 0;
+  }
+  .card-restau article {
+    width: 40%;
+  }
+  .card-restau article .image-wrapper {
+    position: relative;
+  }
+  .card-restau .nouveau-1 {
+    position: absolute !important;
+    top: 15px; /* Ajustez la position verticalement */
+    right: 515px; /* Ajustez la position horizontalement */
+    z-index: 2; /* Assurez-vous que la pastille est au-dessus de l'image */
+  }
+}/*# sourceMappingURL=restau-card.css.map */

@@ -49,3 +49,23 @@ li {
     font-style: normal;
     font-weight: 500;
 }
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        display: flex;        
+        flex-direction: row-reverse;
+        & .text-footer {
+            padding: 30px 40px 10px 80px
+        }
+        ul {
+            display: flex;
+            padding: 30px 0 10px 0;
+            li {
+                padding-left: 15px;
+            }
+            .devenir-partenaire {
+                padding-right: 25px;
+            }
+        }
+    }
+}

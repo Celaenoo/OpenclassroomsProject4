@@ -20,4 +20,14 @@
 }
 .logo-header-menu {
   z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 15px 0 40px 0;
+    box-shadow: none;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=header.css.map */

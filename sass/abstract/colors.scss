@@ -5,3 +5,7 @@ $logo-color: #7E7E7E;
 $grey: #EAEAEA;
 $line-color: #99E2D0;
 $green-font: #008766;
+$button-gradient: linear-gradient(175deg, #FF79DA 0%, $main-color 100%);
+$button-gradient-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+
+
