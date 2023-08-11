@@ -1,8 +1,18 @@
 {
-        "scripts": {
-                "scss": "node-sass — watch scss -o css"
-        },
-        "dependencies": {
-                "node-sass": "^9.0.0"
-        }
+  "scripts": {
+    "scss": "node-sass — watch scss -o css",
+    "compile:sass": "node-sass --output-style compressed sass/main.scss sass/main.css",
+    "clean:css": "rm -rf sass/*.css",
+    "build": "npm run clean:css && npm run compile:sass"
+  },
+  "name": "ocprojet4",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
