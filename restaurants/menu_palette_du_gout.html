@@ -13,7 +13,7 @@
     </head>
 <body>
     <div class="main-container">
-        <header class="header-restau">
+        <header class="header">
             <div class="menu-header">
                 <div class="retour">
                     <a href="../index.html" >
@@ -24,95 +24,111 @@
                     <h1>ohmyfood</h1>
                 </div>
             </div>         
-        </header>  
-        <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat du restaurant" class="menu-image">  
-        <section class="menu-carte">
-            <div class="h1">
-                <h1>La palette du goût</h1>                    
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <article class="menu-liste">
-                <h2>Entrées</h2>
-                <div class="trait-dessous"></div>
-                <div class="menu-plats">
-                    <h3>Fricassée d'escargots</h3>
-                    <div class="sous-titre-plat">
-                        <p>Au piment d'Espelette</p>
-                        <p class="prix-plat">25€</p>
+        </header> 
+        <main>
+            <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image d'un plat du restaurant" class="menu-image">  
+            <section class="menu-carte">
+                <div class="h1">
+                    <h1>La palette du goût</h1>                    
+                    <div class="liked">
+                        <input type="checkbox" id="heart-checkbox-1">
+                        <label for="heart-checkbox-1">
+                            <div class="heart-icons">
+                                <img src="../assets/images/coeurs/default.svg" alt="coeur vide" class="heart-icon empty">
+                                <img src="../assets/images/coeurs/liked.svg" alt="coeur plein" class="heart-icon full">
+                            </div>
+                        </label>
                     </div>
                 </div>
-                <div class="menu-plats">
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <div class="sous-titre-plat">
-                        <p>Et ses copeaux de truffe noire</p>
-                        <p class="prix-plat">35€</p>
-                    </div>                    
-                </div>
-                <div class="menu-plats">
-                    <h3>Œuf au plat</h3>
-                    <div class="sous-titre-plat">
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
-                        <p class="prix-plat">20€</p>
-                    </div> 
-                </div>                
-            </article>
-            <article class="menu-liste">            
-                <h2>Plats</h2>
-                <div class="trait-dessous"></div>
-                <div class="menu-plats">
-                    <h3>Filet de bœuf aux herbes</h3>
-                    <div class="sous-titre-plat">
-                        <p>Accompagné de sa ribambelle de légumes</p>
-                        <p class="prix-plat">40€</p>
-                    </div>                    
-                </div>
-                <div class="menu-plats">
-                    <h3>Parmentier de queue de bœuf</h3>
-                    <div class="sous-titre-plat">
-                        <p>À la truffe noire sur sa purée de panais</p>
-                        <p class="prix-plat">35€</p>
-                    </div>                     
-                </div>
-                <div class="menu-plats">
-                    <h3>Filet de turbot</h3>
-                    <div class="sous-titre-plat">
-                        <p>Aux agrumes</p>
-                        <p class="prix-plat">44€</p>
-                    </div>                     
-                </div>                
-            </article>
+                <article class="menu-liste">
+                    <h2>Entrées</h2>
+                    <div class="trait-dessous"></div>
+                    <div class="plat">
+                        <div class="menu-plats">
+                            <h3>Fricassée d'escargots</h3>
+                            <div class="sous-titre-plat">
+                                <p>Au piment d'Espelette</p>
+                                <p class="prix-plat">25€</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ckeckmark"><i class="fa-solid fa-check"></i></div>
 
-            <article class="menu-liste">                    
-                <h2>Desserts</h2>                
-                <div class="trait-dessous"></div>
-                <div class="menu-plats">
-                    <h3>Paris-Brest</h3>
-                    <div class="sous-titre-plat">
-                        <p>Revisité</p>
-                        <p class="prix-plat">18€</p>
-                    </div>                    
-                </div>
+                    </div>
 
-                <div class="menu-plats">
-                    <h3>Macaron au chocolat d'exception</h3>
-                    <div class="sous-titre-plat">
-                        <p>Et glace à la vanille de Madagascar</p>
-                        <p class="prix-plat">22€</p>
-                    </div>                    
-                </div>
+                    <div class="menu-plats">
+                        <h3>Foie gras de canard mi-cuit</h3>
+                        <div class="sous-titre-plat">
+                            <p>Et ses copeaux de truffe noire</p>
+                            <p class="prix-plat">35€</p>
+                        </div>                    
+                    </div>
+                    <div class="menu-plats">
+                        <h3>Œuf au plat</h3>
+                        <div class="sous-titre-plat">
+                            <p>Assaisonné à la truffe sur lit de caviar</p>
+                            <p class="prix-plat">20€</p>
+                        </div> 
+                    </div>                
+                </article>
+                <article class="menu-liste">            
+                    <h2>Plats</h2>
+                    <div class="trait-dessous"></div>
+                    <div class="menu-plats">
+                        <h3>Filet de bœuf aux herbes</h3>
+                        <div class="sous-titre-plat">
+                            <p>Accompagné de sa ribambelle de légumes</p>
+                            <p class="prix-plat">40€</p>
+                        </div>                    
+                    </div>
+                    <div class="menu-plats">
+                        <h3>Parmentier de queue de bœuf</h3>
+                        <div class="sous-titre-plat">
+                            <p>À la truffe noire sur sa purée de panais</p>
+                            <p class="prix-plat">35€</p>
+                        </div>                     
+                    </div>
+                    <div class="menu-plats">
+                        <h3>Filet de turbot</h3>
+                        <div class="sous-titre-plat">
+                            <p>Aux agrumes</p>
+                            <p class="prix-plat">44€</p>
+                        </div>                     
+                    </div>                
+                </article>
 
-                <div class="menu-plats">
-                    <h3>Mousse au chocolat</h3>
-                    <div class="sous-titre-plat">
-                        <p>Au piment d'Espelette et à la truffe noire</p>
-                        <p class="prix-plat">23€</p>
-                    </div>                    
-                </div>
-            </article>
-            <div class="bouton-commander">
-                <button class="bouton">Commander</button>     
-            </div>             
-        </section>
+                <article class="menu-liste">                    
+                    <h2>Desserts</h2>                
+                    <div class="trait-dessous"></div>
+                    <div class="menu-plats">
+                        <h3>Paris-Brest</h3>
+                        <div class="sous-titre-plat">
+                            <p>Revisité</p>
+                            <p class="prix-plat">18€</p>
+                        </div>                    
+                    </div>
+
+                    <div class="menu-plats">
+                        <h3>Macaron au chocolat d'exception</h3>
+                        <div class="sous-titre-plat">
+                            <p>Et glace à la vanille de Madagascar</p>
+                            <p class="prix-plat">22€</p>
+                        </div>                    
+                    </div>
+
+                    <div class="menu-plats">
+                        <h3>Mousse au chocolat</h3>
+                        <div class="sous-titre-plat">
+                            <p>Au piment d'Espelette et à la truffe noire</p>
+                            <p class="prix-plat">23€</p>
+                        </div>                    
+                    </div>
+                </article>
+                <div class="bouton-commander">
+                    <button class="bouton">Commander</button>     
+                </div>             
+            </section>
+        </main> 
         <footer class="footer">
             <p class="text-footer">ohmyfood</p>
             <ul class="liste-footer">

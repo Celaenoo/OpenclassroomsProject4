@@ -9,13 +9,10 @@
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     text-decoration: none;
     color: black;
-    /* height: 251px; */
-    img {
+    .image-restau {
         height: 170px;    
         border-radius: 15px 15px 0 0;
         width: 100%;
-        // object-fit: cover;   
-        // box-sizing: border-box;
     }
     .nouveau {
         color: $green-font;
@@ -55,7 +52,7 @@
     
     .heart-icon {
         width: 30px;
-        height: 30px;
+        // height: 30px;
         transition: opacity 0.3s;
         position: absolute;
         top: -25px; 
@@ -77,12 +74,6 @@
     #heart-checkbox-4:checked + label .heart-icon:first-child {
         opacity: 0;
     }
-    
-    
-    
-    
-    
-    
 }    
     
     
@@ -101,38 +92,32 @@
             .image-wrapper {
                 position: relative;
             }
-        }
-        .nouveau-1 {
-            position: absolute !important; 
-            top: 15px; /* Ajustez la position verticalement */
-            right: 515px; /* Ajustez la position horizontalement */
-            z-index: 2; /* Assurez-vous que la pastille est au-dessus de l'image */
-        }
-        // .nouveau {
-        //     position: relative;
-        //     top: 10px;
-        //     right: -10px;
-        // }
-        // .nouveau {
-        //     // Ajuster le positionnement pour la version desktop
-        //     top: 20px;
-        //     right: 20px;
-        //     margin-top: 0;
-        //     padding-top: 0;
-        //     width: auto;
-        //     height: auto;
-        //     border-radius: 0;
-        //     background: none;
-        //     box-shadow: none;
+        } 
+        // .nouveau-1 {
+        //     position: absolute !important; 
+        //     top: 15px; /* Ajustez la position verticalement */
+        //     right: 515px; /* Ajustez la position horizontalement */
+        //     z-index: 2; /* Assurez-vous que la pastille est au-dessus de l'image */
         // }
     }
 
-    // .restau-card {
-    //     .nouveau {
-    //         position: relative;
-    //         top: -170px;
-    //         right: none;
-    //         left: 450px;
-    //     }
-    // }
+    .restau-card {
+        .nouveau-1::before {
+            color: $green-font;
+            content: "Nouveau";
+            font-size: 14px;
+            text-align: center;
+            width: 30px;
+            height: 29px;
+            position: absolute;
+            z-index: 10;
+            right: -100%;
+            top: -100%;
+            margin-top: 14px;
+            padding-top: 7px;
+            border-radius: 2px;
+            background: var(--green, #99E2D0);
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
 }

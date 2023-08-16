@@ -1,1 +1,620 @@
-@import url(./base/base.css);@import url(./base/typography.css);@import url(./layout/section-fonctionnement.css);@import url(./layout/section-localisation.css);@import url(./layout/section-menu.css);@import url(./layout/footer.css);@import url(./layout/section-restaurant.css);@import url(./abstract/colors.css);@import url(./components/button.css);@import url(./components/card-content.css);@import url(./components/icone.css);@import url(./components/restau-card.css);.header{display:flex;justify-content:center;align-items:center;box-shadow:0px 2px 4px 0px rgba(0,0,0,0.15);position:relative}.logo-header{width:197px;height:36px;text-align:center;margin:10px 0px 8px 0px}.logo-header-restau{display:flex;align-self:flex-end;justify-content:center}.logo-header-menu{z-index:-1}@media screen and (min-width: 1024px){.header{padding:15px 0 40px 0;box-shadow:none}.header h1{font-size:40px}}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.header .logo-header {
+  width: 197px;
+  height: 36px;
+  text-align: center;
+  margin: 10px 0px 8px 0px;
+  /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55); */
+}
+.header .logo-header-restau {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+}
+.header .logo-header-menu {
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 15px 0 40px 0;
+    box-shadow: none;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+  .header .logo-header {
+    margin: 0;
+  }
+  .header .logo-header-restau {
+    padding-left: 19px;
+  }
+}
+.fonctionnement {
+  padding-bottom: 45px;
+}
+.fonctionnement h2 {
+  padding: 45px 80px 30px 20px;
+}
+.fonctionnement .numero {
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+  align-items: center;
+  width: 28px;
+  height: 24px;
+  border: 1px solid #9356DC;
+  border-radius: 50px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 32px;
+  margin-right: -12px;
+  z-index: 3;
+}
+
+.fonctionnement-rectangle {
+  display: flex;
+  align-items: baseline;
+  margin-left: -15px;
+}
+
+.liste-fonctionnement {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 72px;
+  border-radius: 20px;
+  align-items: center;
+  background-color: #F6F6F6;
+  gap: 30px;
+  padding-left: 31px;
+}
+.liste-fonctionnement p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.liste-fonctionnement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 20px;
+  transition: opacity 250ms;
+}
+.liste-fonctionnement:hover::before {
+  opacity: 1;
+}
+.liste-fonctionnement:hover > .fa-solid {
+  color: #9356DC;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 25px;
+  }
+  .fonctionnement h2 {
+    margin-left: 100px;
+    padding-left: 0;
+  }
+  .fonctionnement-enchainement {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 5%;
+  }
+  .fonctionnement-rectangle {
+    width: 380px;
+    margin-left: 0;
+  }
+}
+.localisation {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background: #EAEAEA;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.explorer-restau {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+.explorer-restau h2 {
+  padding: 35px 58px 0 42px;
+  text-align: center;
+}
+.explorer-restau p {
+  padding: 10px 26px 28px 34px;
+  text-align: center;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retour {
+  position: absolute;
+  left: 15px;
+}
+.retour i {
+  font-size: 21px;
+  color: black;
+}
+
+.menu-image {
+  height: 275px;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 18px -10px 18px;
+  padding-right: 20px;
+}
+.h1 input[type=checkbox] {
+  display: none;
+}
+.h1 input[type=checkbox] + label {
+  display: inline-block;
+  cursor: pointer;
+}
+.h1 .heart-icons {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.h1 .heart-icon {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: -25px;
+}
+.h1 .empty,
+.h1 #heart-checkbox-1:checked + label .heart-icon:last-child,
+.h1 #heart-checkbox-2:checked + label .heart-icon:last-child,
+.h1 #heart-checkbox-3:checked + label .heart-icon:last-child,
+.h1 #heart-checkbox-4:checked + label .heart-icon:last-child {
+  opacity: 1;
+}
+.h1 .full,
+.h1 #heart-checkbox-1:checked + label .heart-icon:first-child,
+.h1 #heart-checkbox-2:checked + label .heart-icon:first-child,
+.h1 #heart-checkbox-3:checked + label .heart-icon:first-child,
+.h1 #heart-checkbox-4:checked + label .heart-icon:first-child {
+  opacity: 0;
+}
+
+.menu-carte {
+  background-color: #F6F6F6;
+  border: 1px solid transparent;
+  border-radius: 30px 30px 0 0;
+  margin-top: -50px;
+}
+
+.menu-liste {
+  margin: 40px 10px;
+}
+.menu-liste h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.trait-dessous {
+  margin-top: 4px;
+  background: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+
+.plat {
+  display: flex;
+}
+
+.menu-plats {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  margin-top: 12px;
+  z-index: 1;
+}
+.menu-plats:hover {
+  transform-origin: 0% 50%;
+  transform: scaleX(0.85);
+  transition: transform 100ms;
+}
+.menu-plats .sous-titre-plat {
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-between;
+}
+.menu-plats .sous-titre-plat p {
+  font-size: 15px;
+}
+.menu-plats .sous-titre-plat .prix-plat {
+  font-weight: 700;
+}
+
+.checkmark {
+  border: solid 1px black;
+  z-index: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-carte {
+    margin: -35px 150px;
+    padding: 10px 170px;
+  }
+  .menu-carte .h1 {
+    justify-content: center;
+  }
+  .menu-carte .h1 h1 {
+    padding-right: 30px;
+    font-size: 26px;
+  }
+  .retour i {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+}
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+
+/* .footer i {
+    height: 11px;
+    width: 13px;
+} */
+.logo-footer {
+  filter: invert(100%);
+}
+
+.text-footer {
+  font-family: Shrikhand;
+}
+
+.liste-footer {
+  list-style-type: none;
+}
+.liste-footer a {
+  color: white;
+  font-weight: 400;
+  padding-bottom: 9px;
+  text-decoration: none;
+}
+.liste-footer li {
+  padding-top: 7px;
+}
+.liste-footer .fa-solid {
+  margin-right: 7px;
+}
+.liste-footer .fa-utensils {
+  font-size: 14px;
+}
+.liste-footer .fa-handshake-angle {
+  font-size: 10px;
+}
+.liste-footer .mentions-contact {
+  font-weight: 300;
+}
+
+li {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer .text-footer {
+    padding: 30px 40px 10px 80px;
+  }
+  .footer ul {
+    display: flex;
+    padding: 30px 0 10px 0;
+  }
+  .footer ul li {
+    padding-left: 15px;
+  }
+  .footer ul .devenir-partenaire {
+    padding-right: 25px;
+  }
+}
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 52px 18px 45px 17px;
+}
+.restaurants h2 {
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .restaurants h2 {
+    padding-bottom: 10px;
+    margin-left: 60px;
+  }
+}
+button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.explorer-restau {
+  position: relative;
+}
+
+.bouton {
+  position: relative;
+  width: 218px;
+  margin-bottom: 57px;
+  border: 0 solid transparent;
+  border-radius: 25px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
+  height: 50px;
+  line-height: 47px;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+.bouton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  opacity: 0;
+  z-index: -1;
+  border-radius: 25px;
+  transition: opacity 500ms;
+}
+.bouton:hover::before {
+  opacity: 1;
+}
+
+.bouton-commander {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  margin-bottom: -15px;
+}
+.bouton-commander .bouton {
+  width: 186px;
+  height: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .explorer-restau h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .explorer-restau .bouton {
+    margin-bottom: 30px;
+  }
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px 12px 13px;
+}
+.card-content p {
+  font-size: 17px;
+}
+
+.fa-heart {
+  font-size: 25px;
+}
+
+.fa-mobile-screen-button,
+.fa-list,
+.fa-store {
+  color: #7E7E7E;
+}
+
+.fa-mobile-screen-button {
+  font-size: 20px;
+}
+
+.fa-list {
+  font-size: 15px;
+}
+
+.fa-store {
+  font-size: 14px;
+}
+
+.restau-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 18px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: black;
+}
+.restau-card .image-restau {
+  height: 170px;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+.restau-card .nouveau {
+  color: #008766;
+  font-size: 14px;
+  text-align: center;
+  width: 80px;
+  height: 29px;
+  position: absolute;
+  right: 30px;
+  margin-top: 14px;
+  padding-top: 7px;
+  border-radius: 2px;
+  background: var(--green, #99E2D0);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.restau-card h3,
+.restau-card p {
+  padding-bottom: 4px;
+}
+.restau-card input[type=checkbox] {
+  display: none;
+}
+.restau-card input[type=checkbox] + label {
+  display: inline-block;
+  cursor: pointer;
+}
+.restau-card .heart-icons {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.restau-card .heart-icon {
+  width: 30px;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: -25px;
+  right: 10px;
+}
+.restau-card .empty,
+.restau-card #heart-checkbox-1:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-2:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-3:checked + label .heart-icon:last-child,
+.restau-card #heart-checkbox-4:checked + label .heart-icon:last-child {
+  opacity: 1;
+}
+.restau-card .full,
+.restau-card #heart-checkbox-1:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-2:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-3:checked + label .heart-icon:first-child,
+.restau-card #heart-checkbox-4:checked + label .heart-icon:first-child {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-restau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 50px;
+    margin: 20px;
+    margin-bottom: 0;
+  }
+  .card-restau article {
+    width: 40%;
+  }
+  .card-restau article .image-wrapper {
+    position: relative;
+  }
+  .restau-card .nouveau-1::before {
+    color: #008766;
+    content: "Nouveau";
+    font-size: 14px;
+    text-align: center;
+    width: 30px;
+    height: 29px;
+    position: absolute;
+    z-index: 10;
+    right: -100%;
+    top: -100%;
+    margin-top: 14px;
+    padding-top: 7px;
+    border-radius: 2px;
+    background: var(--green, #99E2D0);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
