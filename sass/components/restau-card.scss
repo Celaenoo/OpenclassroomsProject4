@@ -9,6 +9,7 @@
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     text-decoration: none;
     color: black;
+    position: relative;
     .image-restau {
         height: 170px;    
         border-radius: 15px 15px 0 0;
@@ -21,7 +22,7 @@
         width: 80px;
         height: 29px;
         position: absolute;
-        right: 30px;
+        right: 20px;
         margin-top: 14px;
         padding-top: 7px;
         border-radius: 2px;
@@ -31,42 +32,35 @@
     h3,
     p {
         padding-bottom: 4px;
-    }   
-    
+    }
     input[type="checkbox"] {
         display: none;
-    }
-    
+    }    
     input[type="checkbox"] + label {
         display: inline-block;
         cursor: pointer;
-    }
-    
+    }    
     .heart-icons {
         position: relative;
         bottom: 0;
         right: 0;
         display: flex;
         align-items: center;
-    }
-    
+    }    
     .heart-icon {
         width: 30px;
-        // height: 30px;
         transition: opacity 0.3s;
         position: absolute;
         top: -25px; 
         right: 10px;
-    }
-    
+    }    
     .empty,
     #heart-checkbox-1:checked + label .heart-icon:last-child,
     #heart-checkbox-2:checked + label .heart-icon:last-child,
     #heart-checkbox-3:checked + label .heart-icon:last-child,
     #heart-checkbox-4:checked + label .heart-icon:last-child {
         opacity: 1;
-    }
-    
+    }    
     .full,
     #heart-checkbox-1:checked + label .heart-icon:first-child,
     #heart-checkbox-2:checked + label .heart-icon:first-child,
@@ -93,31 +87,5 @@
                 position: relative;
             }
         } 
-        // .nouveau-1 {
-        //     position: absolute !important; 
-        //     top: 15px; /* Ajustez la position verticalement */
-        //     right: 515px; /* Ajustez la position horizontalement */
-        //     z-index: 2; /* Assurez-vous que la pastille est au-dessus de l'image */
-        // }
-    }
-
-    .restau-card {
-        .nouveau-1::before {
-            color: $green-font;
-            content: "Nouveau";
-            font-size: 14px;
-            text-align: center;
-            width: 30px;
-            height: 29px;
-            position: absolute;
-            z-index: 10;
-            right: -100%;
-            top: -100%;
-            margin-top: 14px;
-            padding-top: 7px;
-            border-radius: 2px;
-            background: var(--green, #99E2D0);
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        }
     }
 }

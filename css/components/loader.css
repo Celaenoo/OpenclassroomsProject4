@@ -1,0 +1,48 @@
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  border: 10px solid #EAEAEA;
+  border-top: 10px solid #9356DC;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite, hide-loader 1300ms forwards;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hide-loader {
+  0%, 70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.main-container {
+  opacity: 1;
+  animation: show-content 2000ms;
+  animation-fill-mode: both;
+}
+
+@keyframes show-content {
+  0%, 70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=loader.css.map */

@@ -1,9 +1,6 @@
 {
   "scripts": {
-    "scss": "node-sass — watch scss -o css",
-    "compile:sass": "node-sass --output-style compressed sass/main.scss sass/main.css",
-    "clean:css": "rm -rf sass/*.css",
-    "build": "npm run clean:css && npm run compile:sass"
+    "sass": "sass --watch ./sass/main.scss:./css/main.css"
   },
   "name": "ocprojet4",
   "description": "",

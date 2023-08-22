@@ -1,3 +1,129 @@
-<svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.7206 2.40551L12.7203 2.40576L11.8739 3.35732L11.5003 3.77727L11.1267 3.35732L10.2802 2.40576L10.2797 2.40514C8.28247 0.152585 5.09737 -0.169649 2.9764 1.80201C0.482212 4.1245 0.344816 8.32357 2.58455 10.8495L10.8987 20.2148C10.8987 20.2149 10.8988 20.2149 10.8988 20.2149C11.237 20.5955 11.7593 20.5955 12.0975 20.2149C12.0975 20.2149 12.0975 20.2149 12.0976 20.2148L20.4119 10.8493L20.412 10.8492C22.6556 8.32335 22.5183 4.12461 20.0243 1.80213L12.7206 2.40551ZM12.7206 2.40551C14.7223 0.15233 17.9032 -0.169452 20.024 1.80187L12.7206 2.40551Z" stroke="#101010"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="23"
+   height="21"
+   viewBox="0 0 23 21"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     d="M12.7206 2.40551L12.7203 2.40576L11.8739 3.35732L11.5003 3.77727L11.1267 3.35732L10.2802 2.40576L10.2797 2.40514C8.28247 0.152585 5.09737 -0.169649 2.9764 1.80201C0.482212 4.1245 0.344816 8.32357 2.58455 10.8495L10.8987 20.2148C10.8987 20.2149 10.8988 20.2149 10.8988 20.2149C11.237 20.5955 11.7593 20.5955 12.0975 20.2149C12.0975 20.2149 12.0975 20.2149 12.0976 20.2148L20.4119 10.8493L20.412 10.8492C22.6556 8.32335 22.5183 4.12461 20.0243 1.80213L12.7206 2.40551ZM12.7206 2.40551C14.7223 0.15233 17.9032 -0.169452 20.024 1.80187L12.7206 2.40551Z"
+     stroke="#101010"
+     id="path1" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path33"
+     cx="16.250845"
+     cy="2.9336865"
+     rx="0.62229711"
+     ry="0.85343605" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path34"
+     cx="15.575209"
+     cy="2.6669877"
+     rx="0.80009633"
+     ry="0.90677583" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path35"
+     cx="14.988471"
+     cy="2.8270071"
+     rx="0.7645365"
+     ry="0.40893811" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path36"
+     cx="13.752767"
+     cy="3.2448351"
+     rx="0.41782808"
+     ry="0.24002889" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path37"
+     cx="14.766222"
+     cy="2.8447869"
+     rx="0.86232603"
+     ry="0.56895739" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path38"
+     cx="14.526193"
+     cy="3.1114857"
+     rx="0.96011555"
+     ry="0.65785694" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path39"
+     cx="14.979581"
+     cy="2.8003371"
+     rx="0.72008669"
+     ry="0.84454608" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path40"
+     cx="14.552863"
+     cy="2.4447386"
+     rx="0.41782808"
+     ry="0.13334939" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path41"
+     cx="17.434601"
+     cy="2.2704756"
+     rx="0.46403882"
+     ry="0.67948544" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path42"
+     cx="18.821194"
+     cy="2.519068"
+     rx="0.4695631"
+     ry="0.3314563" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path43"
+     cx="19.312855"
+     cy="2.7068932"
+     rx="0.16572815"
+     ry="0.14363107" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path44"
+     cx="18.263243"
+     cy="1.9555922"
+     rx="0.24306795"
+     ry="0.088388346" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path46"
+     cx="18.627844"
+     cy="2.0992231"
+     rx="0.14363107"
+     ry="0.099436894" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path47"
+     cx="21.517038"
+     cy="1.8893009"
+     rx="0.027621359"
+     ry="0.066291258" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path48"
+     cx="16.734375"
+     cy="2.0820312"
+     rx="0.2265625"
+     ry="0.30078125" />
+  <ellipse
+     style="opacity:0.98;fill:#ffffff;fill-opacity:1;stroke:#f9f9f9"
+     id="path49"
+     cx="18.179688"
+     cy="2.1289062"
+     rx="0.140625"
+     ry="0.37109375" />
 </svg>

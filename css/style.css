@@ -299,30 +299,31 @@ p {
 
 .plat {
   display: flex;
-  overflow: hidden;
-  width: 100%;
+}
+
+.menu-plats {
   background-color: white;
   border: 1px solid transparent;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-}
-
-.menu-plats {
   padding: 10px 15px;
   margin-top: 12px;
+  opacity: 1;
   width: 100%;
   cursor: pointer;
   position: relative;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu-plats:hover {
   border-radius: 15px 0 0 15px;
 }
 .menu-plats:hover + .checkmark {
-  transform: translateX(0);
+  width: 60px;
+  opacity: 1;
 }
 .menu-plats .sous-titre-plat {
   display: flex;
@@ -338,7 +339,7 @@ p {
 
 .checkmark {
   display: flex;
-  background-color: #99E2D0;
+  background-color: red;
   border: 1px solid transparent;
   border-radius: 0 15px 15px 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -347,8 +348,7 @@ p {
   position: relative;
   align-items: center;
   justify-content: space-around;
-  transform: translateX(69px);
-  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  transition: width 0.3s, opacity 0.3s, background-color 0.3s;
 }
 .checkmark .fa-check {
   height: 18px;
@@ -694,4 +694,4 @@ button {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

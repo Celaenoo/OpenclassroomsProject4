@@ -24,43 +24,37 @@
 
 .h1 {
     display: flex;    
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 30px 18px -10px 18px;
     padding-right: 20px;
     input[type="checkbox"] {
         display: none;
-    }
-    
+    }    
     input[type="checkbox"] + label {
         display: inline-block;
         cursor: pointer;
-    }
-    
+    }    
     .heart-icons {
         position: relative;
         bottom: 0;
         right: 0;
         display: flex;
         align-items: center;
-    }
-    
+    }    
     .heart-icon {
         width: 30px;
-        height: 30px;
         transition: opacity 0.3s;
         position: absolute;
         top: -25px; 
-    }
-    
+    }    
     .empty,
     #heart-checkbox-1:checked + label .heart-icon:last-child,
     #heart-checkbox-2:checked + label .heart-icon:last-child,
     #heart-checkbox-3:checked + label .heart-icon:last-child,
     #heart-checkbox-4:checked + label .heart-icon:last-child {
         opacity: 1;
-    }
-    
+    }    
     .full,
     #heart-checkbox-1:checked + label .heart-icon:first-child,
     #heart-checkbox-2:checked + label .heart-icon:first-child,
@@ -68,15 +62,13 @@
     #heart-checkbox-4:checked + label .heart-icon:first-child {
         opacity: 0;
     }
-
 }
 
 .menu-carte {
     background-color: $main-bg-color;
     border: 1px solid transparent;    
     border-radius: 30px 30px 0 0;
-    margin-top: -50px;
-    
+    margin-top: -50px;    
 }
 
 .menu-liste {
@@ -85,8 +77,29 @@
         font-size: 16px;
         font-weight: 300;
         text-transform: uppercase;
+    }    
+    &:nth-child(2) .menu-plats {
+        animation: fadeInLeft 1s 1800ms both;
+    }    
+    &:nth-child(3) .menu-plats {
+        animation: fadeInLeft 1s 2100ms both;
+    }
+    &:nth-child(4) .menu-plats {
+        animation: fadeInLeft 1s 2400ms both;
     }
 }
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .trait-dessous {
     margin-top: 4px;
     background: $line-color;
@@ -96,31 +109,41 @@
 
 .plat {
     display: flex;
-}
-
-.menu-plats {
+    overflow: hidden;
+    width: 100%; 
     background-color: white;
     border: 1px solid transparent;
     border-radius: 15px;
-    box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px rgba(0, 0, 0, 0.10);
-    padding: 10px 15px;
-    margin-top: 12px;    
-    z-index: 1;
-    &:hover {
-        transform-origin: 0% 50%;
-        
-        transform: scaleX(0.85);
-        transition: transform 100ms; 
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);  
+}
 
-    }    
-
-
-
+.menu-plats {
     
+    padding: 10px 15px;
+    margin-top: 12px;
+    width: 100%;
+    cursor: pointer;
+    position: relative; 
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+ 
+    white-space: nowrap;        //
+    // overflow: hidden;        
+    text-overflow: ellipsis;  //
+    
+
+
+    &:hover {        
+        border-radius: 15px 0 0 15px;
+        + .checkmark {
+            transform: translateX(0);            
+        }
+    }
     .sous-titre-plat {
         display: flex;
         padding-top: 5px;    
-        justify-content: space-between;
+        justify-content: space-between;        
         p {    
             font-size: 15px;
         }
@@ -130,11 +153,32 @@
     }
 }
 
-.checkmark {
-    border: solid 1px black;
-    z-index: 0;
-}
+.checkmark {    
+    display: flex;
+    background-color: $line-color;
+    border: 1px solid transparent;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    margin-top: 12px;   
+    width: 69px;    
 
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    // opacity: 0;  
+    transform: translateX(69px);   
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    .fa-check {
+        height: 18px;
+        width: 18px;
+        font-size: smaller;
+        color: $line-color;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: 2px;
+        background-color: white;
+    }
+}
 
 
 
@@ -150,7 +194,6 @@
             }
         }
     }
-
     .retour {
         i {
             padding-top: 20px;
