@@ -24,10 +24,10 @@
 
 .h1 {
     display: flex;    
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 30px 18px -10px 18px;
-    padding-right: 20px;
+    margin: 30px 18px 30px 18px;
+    padding-right: 60px;
     input[type="checkbox"] {
         display: none;
     }    
@@ -72,19 +72,20 @@
 }
 
 .menu-liste {
-    margin: 40px 10px;
+    padding: 0 10px 40px 10px;
+    overflow: hidden;
     h2 {    
         font-size: 16px;
         font-weight: 300;
         text-transform: uppercase;
     }    
-    &:nth-child(2) .menu-plats {
+    &:nth-child(2) .plat {
         animation: fadeInLeft 1s 1800ms both;
     }    
-    &:nth-child(3) .menu-plats {
+    &:nth-child(3) .plat {
         animation: fadeInLeft 1s 2100ms both;
     }
-    &:nth-child(4) .menu-plats {
+    &:nth-child(4) .plat {
         animation: fadeInLeft 1s 2400ms both;
     }
 }
@@ -111,47 +112,47 @@
     display: flex;
     overflow: hidden;
     width: 100%; 
+    margin-top: 15px;
     background-color: white;
-    border: 1px solid transparent;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);  
 }
 
 .menu-plats {
-    
+    display: flex;     
+    justify-content: space-between;
+    align-items: flex-end; 
     padding: 10px 15px;
-    margin-top: 12px;
     width: 100%;
     cursor: pointer;
     position: relative; 
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-
+    opacity: 1;
+    // transition: opacity 0.5s ease, transform 0.5s ease;
  
-    white-space: nowrap;        //
+    white-space: nowrap; //
     // overflow: hidden;        
-    text-overflow: ellipsis;  //
-    
+    // text-overflow: ellipsis;
 
-
+    .prix-plat {
+        p {
+            font-weight: 700; 
+        }    
+    } 
     &:hover {        
         border-radius: 15px 0 0 15px;
         + .checkmark {
-            transform: translateX(0);            
+            opacity: 1;
+            transform: translateX(0); 
+            width: 69px;           
         }
     }
-    .sous-titre-plat {
-        display: flex;
-        padding-top: 5px;    
-        justify-content: space-between;        
         p {    
+            padding-top: 5px;
             font-size: 15px;
         }
-        .prix-plat {    
-            font-weight: 700; 
-        }  
+         
     }
-}
+
 
 .checkmark {    
     display: flex;
@@ -159,15 +160,14 @@
     border: 1px solid transparent;
     border-radius: 0 15px 15px 0;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    margin-top: 12px;   
-    width: 69px;    
-
+    width: 0;    
+    opacity: 0;
+    overflow: hidden;
     position: relative;
     align-items: center;
     justify-content: space-around;
-    // opacity: 0;  
     transform: translateX(69px);   
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    transition: transform 300ms linear, opacity 300ms linear, background-color 300ms linear, width 300ms linear;
     .fa-check {
         height: 18px;
         width: 18px;
@@ -177,6 +177,7 @@
         border-radius: 10px;
         padding: 2px;
         background-color: white;
+        border: none;
     }
 }
 
@@ -188,6 +189,7 @@
         padding: 10px 170px;
         .h1 {
             justify-content: center;
+            padding-right: 0;
             h1 {
                 padding-right: 30px;
                 font-size: 26px;
