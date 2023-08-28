@@ -122,6 +122,7 @@ p {
 }
 .liste-fonctionnement:hover {
   cursor: pointer;
+  background-color: #EAEAEA;
 }
 .liste-fonctionnement p {
   font-size: 16px;
@@ -134,7 +135,6 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: red;
   opacity: 0;
   z-index: -1;
   border-radius: 20px;
@@ -622,7 +622,7 @@ button {
 }
 .restau-card .heart-icon {
   width: 30px;
-  transition: opacity 0.3s;
+  transition: opacity 1000ms;
   position: absolute;
   top: -25px;
   right: 10px;
@@ -671,7 +671,7 @@ button {
   width: 100px;
   height: 100px;
   animation: spin 2s linear infinite, hide-loader 1300ms forwards;
-  transition: opacity 0.2s;
+  transition: opacity 200ms;
   opacity: 1;
 }
 

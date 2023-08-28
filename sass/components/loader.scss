@@ -11,7 +11,7 @@
   width: 100px;
   height: 100px;
   animation: spin 2s linear infinite, hide-loader 1300ms forwards;
-  transition: opacity 0.2s;
+  transition: opacity 200ms;
   opacity: 1;
 }
 

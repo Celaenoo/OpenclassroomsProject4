@@ -45,7 +45,8 @@
     gap: 30px;
     padding-left: 31px;
     &:hover {
-        cursor: pointer;
+        cursor: pointer;        
+        background-color: $grey;
     }
     p {     
         font-size: 16px;
@@ -58,7 +59,6 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: red;
         opacity: 0;
         z-index: -1;
         border-radius: 20px;
