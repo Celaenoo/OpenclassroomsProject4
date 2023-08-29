@@ -2,9 +2,11 @@
 
 .fonctionnement {
     padding-bottom: 45px;
+
     h2 {
         padding: 45px 80px 30px 20px;
     }
+
     .numero {    
         display: flex;
         justify-content: center;
@@ -21,8 +23,7 @@
         margin-left: 32px;
         margin-right: -12px;
         z-index: 3;
-    }
-    
+    }    
 }
 
 .fonctionnement-rectangle {
@@ -44,14 +45,17 @@
     background-color: $main-bg-color;
     gap: 30px;
     padding-left: 31px;
+
     &:hover {
         cursor: pointer;        
         background-color: $grey;
     }
+
     p {     
         font-size: 16px;
         font-weight: 500;
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -64,15 +68,15 @@
         border-radius: 20px;
         transition: opacity 250ms;
     }
+
     &:hover::before {
         opacity: 1;
     }
+
     &:hover > .fa-solid {
         color: $main-color;
-    }
-    
+    }    
 }
-
 
 @media screen and (min-width: 1024px) {
     .fonctionnement {
@@ -80,21 +84,21 @@
         flex-direction: column;
         justify-content: center;
         padding-bottom: 25px;
+
         & h2 {
             margin-left: 120px;
             padding-left: 0;
         }
+
         &-enchainement {
             display: flex;
             justify-content: space-evenly;
             margin: 0 5%;
-        }    
+        } 
+
         &-rectangle {
             width: 380px;
             margin-left: 0;
         } 
-    }
-
-
-    
+    }    
 }

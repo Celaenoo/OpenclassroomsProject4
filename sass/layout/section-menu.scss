@@ -137,14 +137,17 @@
 
         .menu-plats {
             max-width: calc(100% - 59px);
+
             p, h3{
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
             }
+
             p{
                 max-width: calc(100% - 60px);
             }
+
             h3{
                 max-width: calc(100% - 30px);
             }
@@ -155,7 +158,7 @@
         }
 
         .checkmark i {
-            animation: rotate 0.3s 0.1s forwards;
+            animation: rotate 0.3s 0.2s forwards;
         }
     }
 }
@@ -174,14 +177,13 @@
         padding-top: 5px;
         font-size: 15px;
     }
+
     p, h3 {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         max-width: calc(100% - 30px);
-    }
-   
-
+    } 
 }
 
 .prix-plat {
@@ -195,7 +197,6 @@
         font-weight: 700;
     }
 }
-
 
 .checkmark {
     width: 59px;
@@ -215,9 +216,7 @@
     .fa-check {
         height: 18px;
         width: 18px;
-        font-size: smaller;
         color: $line-color;
-        border: 1px solid white;
         border-radius: 10px;
         padding: 2px;
         background-color: white;
@@ -230,8 +229,6 @@
         transform: rotate(360deg);
     }
 }
-
-
 
 @media screen and (min-width: 1024px) {
     .menu-carte {

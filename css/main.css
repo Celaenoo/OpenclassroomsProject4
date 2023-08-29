@@ -50,7 +50,6 @@ p {
   height: 36px;
   text-align: center;
   margin: 10px 0px 8px 0px;
-  /* box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.55); */
 }
 .header .logo-header-restau {
   display: flex;
@@ -333,7 +332,7 @@ p {
   transform: translateX(-59px);
 }
 .plat:hover .checkmark i {
-  animation: rotate 0.3s 0.1s forwards;
+  animation: rotate 0.3s 0.2s forwards;
 }
 
 .menu-plats {
@@ -386,9 +385,7 @@ p {
 .checkmark .fa-check {
   height: 18px;
   width: 18px;
-  font-size: smaller;
   color: #99E2D0;
-  border: 1px solid white;
   border-radius: 10px;
   padding: 2px;
   background-color: white;
@@ -424,10 +421,6 @@ p {
   padding: 22px 25px;
 }
 
-/* .footer i {
-    height: 11px;
-    width: 13px;
-} */
 .logo-footer {
   filter: invert(100%);
 }

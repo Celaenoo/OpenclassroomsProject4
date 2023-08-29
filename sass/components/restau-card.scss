@@ -10,11 +10,13 @@
     text-decoration: none;
     color: black;
     position: relative;
+
     .image-restau {
         height: 170px;    
         border-radius: 15px 15px 0 0;
         width: 100%;
     }
+
     .nouveau {
         color: $green-font;
         font-size: 14px;
@@ -29,38 +31,45 @@
         background: var(--green, #99E2D0);
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
+
     h3,
     p {
         padding-bottom: 4px;
     }
+
     input[type="checkbox"] {
         display: none;
-    }    
+    }  
+
     input[type="checkbox"] + label {
         display: inline-block;
         cursor: pointer;
-    }    
+    }  
+
     .heart-icons {
         position: relative;
         bottom: 0;
         right: 0;
         display: flex;
         align-items: center;
-    }    
+    } 
+
     .heart-icon {
         width: 30px;
         transition: opacity 1000ms;
         position: absolute;
         top: -25px; 
         right: 10px;
-    }    
+    }   
+
     .empty,
     #heart-checkbox-1:checked + label .heart-icon:last-child,
     #heart-checkbox-2:checked + label .heart-icon:last-child,
     #heart-checkbox-3:checked + label .heart-icon:last-child,
     #heart-checkbox-4:checked + label .heart-icon:last-child {
         opacity: 1;
-    }    
+    }   
+
     .full,
     #heart-checkbox-1:checked + label .heart-icon:first-child,
     #heart-checkbox-2:checked + label .heart-icon:first-child,
@@ -68,8 +77,7 @@
     #heart-checkbox-4:checked + label .heart-icon:first-child {
         opacity: 0;
     }
-}    
-    
+}        
     
 @media screen and (min-width: 1024px) {    
     .card-restau {
@@ -81,6 +89,7 @@
         row-gap: 50px;
         margin: 20px;
         margin-bottom: 0;
+        
         article {
             width: 40%;
             .image-wrapper {
