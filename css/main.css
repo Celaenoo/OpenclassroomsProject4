@@ -304,6 +304,7 @@ p {
 
 .plat {
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   width: 100%;
   margin-top: 15px;
@@ -311,48 +312,76 @@ p {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
+.plat:hover .checkmark {
+  transform: translateX(0);
+}
+.plat:hover .menu-plats {
+  max-width: calc(100% - 59px);
+}
+.plat:hover .menu-plats p, .plat:hover .menu-plats h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plat:hover .menu-plats p {
+  max-width: calc(100% - 60px);
+}
+.plat:hover .menu-plats h3 {
+  max-width: calc(100% - 30px);
+}
+.plat:hover .prix-plat {
+  transform: translateX(-59px);
+}
+.plat:hover .checkmark i {
+  animation: rotate 0.3s 0.1s forwards;
+}
 
 .menu-plats {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: start;
   padding: 10px 15px;
   width: 100%;
   cursor: pointer;
   position: relative;
-  opacity: 1;
-  white-space: nowrap;
-}
-.menu-plats .prix-plat p {
-  font-weight: 700;
-}
-.menu-plats:hover {
-  border-radius: 15px 0 0 15px;
-}
-.menu-plats:hover + .checkmark {
-  opacity: 1;
-  transform: translateX(0);
-  width: 69px;
 }
 .menu-plats p {
   padding-top: 5px;
   font-size: 15px;
 }
+.menu-plats p, .menu-plats h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: calc(100% - 30px);
+}
+
+.prix-plat {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateX(0);
+  transition: transform 300ms linear;
+}
+.prix-plat p {
+  font-weight: 700;
+}
 
 .checkmark {
+  width: 59px;
   display: flex;
   background-color: #99E2D0;
   border: 1px solid transparent;
   border-radius: 0 15px 15px 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  right: 0;
   align-items: center;
   justify-content: space-around;
   transform: translateX(69px);
-  transition: transform 300ms linear, opacity 300ms linear, background-color 300ms linear, width 300ms linear;
+  transition: transform 300ms linear;
 }
 .checkmark .fa-check {
   height: 18px;
@@ -366,6 +395,11 @@ p {
   border: none;
 }
 
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 1024px) {
   .menu-carte {
     margin: -35px 150px;

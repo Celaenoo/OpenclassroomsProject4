@@ -1,7 +1,7 @@
 @import "../abstract/colors.scss";
 
 .menu-header {
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -9,6 +9,7 @@
 .retour {
     position: absolute;
     left: 15px;
+
     i {
         font-size: 21px;
         color: black;
@@ -23,68 +24,78 @@
 }
 
 .h1 {
-    display: flex;    
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 30px 18px 30px 18px;
     padding-right: 60px;
+
     input[type="checkbox"] {
         display: none;
-    }    
-    input[type="checkbox"] + label {
+    }
+
+    input[type="checkbox"]+label {
         display: inline-block;
         cursor: pointer;
-    }    
+    }
+
     .heart-icons {
         position: relative;
         bottom: 0;
         right: 0;
         display: flex;
         align-items: center;
-    }    
+    }
+
     .heart-icon {
         width: 30px;
         transition: opacity 1000ms;
         position: absolute;
-        top: -25px; 
-    }    
+        top: -25px;
+    }
+
     .empty,
-    #heart-checkbox-1:checked + label .heart-icon:last-child,
-    #heart-checkbox-2:checked + label .heart-icon:last-child,
-    #heart-checkbox-3:checked + label .heart-icon:last-child,
-    #heart-checkbox-4:checked + label .heart-icon:last-child {
+    #heart-checkbox-1:checked+label .heart-icon:last-child,
+    #heart-checkbox-2:checked+label .heart-icon:last-child,
+    #heart-checkbox-3:checked+label .heart-icon:last-child,
+    #heart-checkbox-4:checked+label .heart-icon:last-child {
         opacity: 1;
-    }    
+    }
+
     .full,
-    #heart-checkbox-1:checked + label .heart-icon:first-child,
-    #heart-checkbox-2:checked + label .heart-icon:first-child,
-    #heart-checkbox-3:checked + label .heart-icon:first-child,
-    #heart-checkbox-4:checked + label .heart-icon:first-child {
+    #heart-checkbox-1:checked+label .heart-icon:first-child,
+    #heart-checkbox-2:checked+label .heart-icon:first-child,
+    #heart-checkbox-3:checked+label .heart-icon:first-child,
+    #heart-checkbox-4:checked+label .heart-icon:first-child {
         opacity: 0;
     }
 }
 
 .menu-carte {
     background-color: $main-bg-color;
-    border: 1px solid transparent;    
+    border: 1px solid transparent;
     border-radius: 30px 30px 0 0;
-    margin-top: -50px;    
+    margin-top: -50px;
 }
 
 .menu-liste {
     padding: 0 10px 40px 10px;
     overflow: hidden;
-    h2 {    
+
+    h2 {
         font-size: 16px;
         font-weight: 300;
         text-transform: uppercase;
-    }    
+    }
+
     &:nth-child(2) .plat {
         animation: fadeInLeft 1s 1800ms both;
-    }    
+    }
+
     &:nth-child(3) .plat {
         animation: fadeInLeft 1s 2100ms both;
     }
+
     &:nth-child(4) .plat {
         animation: fadeInLeft 1s 2400ms both;
     }
@@ -95,6 +106,7 @@
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -110,63 +122,96 @@
 
 .plat {
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
-    width: 100%; 
+    width: 100%;
     margin-top: 15px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);  
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+    &:hover {
+        .checkmark {
+            transform: translateX(0);
+        }
+
+        .menu-plats {
+            max-width: calc(100% - 59px);
+            p, h3{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            p{
+                max-width: calc(100% - 60px);
+            }
+            h3{
+                max-width: calc(100% - 30px);
+            }
+        }
+
+        .prix-plat {
+            transform: translateX(-59px);
+        }
+
+        .checkmark i {
+            animation: rotate 0.3s 0.1s forwards;
+        }
+    }
 }
 
 .menu-plats {
-    display: flex;     
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end; 
+    align-items: start;
     padding: 10px 15px;
     width: 100%;
     cursor: pointer;
-    position: relative; 
-    opacity: 1;
- 
-    white-space: nowrap; //
-    // overflow: hidden;        
-    // text-overflow: ellipsis;
+    position: relative;
 
-    .prix-plat {
-        p {
-            font-weight: 700; 
-        }    
-    } 
-    &:hover {        
-        border-radius: 15px 0 0 15px;
-        + .checkmark {
-            opacity: 1;
-            transform: translateX(0); 
-            width: 69px;           
-        }
+    p {
+        padding-top: 5px;
+        font-size: 15px;
     }
-        p {    
-            padding-top: 5px;
-            font-size: 15px;
-        }
-         
+    p, h3 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: calc(100% - 30px);
     }
+   
+
+}
+
+.prix-plat {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateX(0);
+    transition: transform 300ms linear;
+
+    p {
+        font-weight: 700;
+    }
+}
 
 
-.checkmark {    
+.checkmark {
+    width: 59px;
     display: flex;
     background-color: $line-color;
     border: 1px solid transparent;
     border-radius: 0 15px 15px 0;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    width: 0;    
-    opacity: 0;
-    overflow: hidden;
-    position: relative;
+    position: absolute;
+    height: 100%;
+    right: 0;
     align-items: center;
     justify-content: space-around;
-    transform: translateX(69px);   
-    transition: transform 300ms linear, opacity 300ms linear, background-color 300ms linear, width 300ms linear;
+    transform: translateX(69px);
+    transition: transform 300ms linear;
+
     .fa-check {
         height: 18px;
         width: 18px;
@@ -180,21 +225,30 @@
     }
 }
 
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 @media screen and (min-width: 1024px) {
     .menu-carte {
         margin: -35px 150px;
         padding: 10px 170px;
+
         .h1 {
             justify-content: center;
             padding-right: 0;
+
             h1 {
                 padding-right: 30px;
                 font-size: 26px;
             }
         }
     }
+
     .retour {
         i {
             padding-top: 20px;
@@ -202,4 +256,3 @@
         }
     }
 }
-
