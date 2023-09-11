@@ -30,13 +30,11 @@
     margin: 30px 18px 30px 18px;
     padding-right: 60px;
 
-    input[type="checkbox"] {
-        display: none;
-    }
-
-    input[type="checkbox"]+label {
-        display: inline-block;
-        cursor: pointer;
+    h2 {
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
     }
 
     .heart-icons {
@@ -48,26 +46,26 @@
     }
 
     .heart-icon {
+        cursor: pointer;
         width: 30px;
         transition: opacity 1000ms;
         position: absolute;
-        top: -25px;
     }
 
-    .empty,
-    #heart-checkbox-1:checked+label .heart-icon:last-child,
-    #heart-checkbox-2:checked+label .heart-icon:last-child,
-    #heart-checkbox-3:checked+label .heart-icon:last-child,
-    #heart-checkbox-4:checked+label .heart-icon:last-child {
+    .empty {
         opacity: 1;
-    }
 
-    .full,
-    #heart-checkbox-1:checked+label .heart-icon:first-child,
-    #heart-checkbox-2:checked+label .heart-icon:first-child,
-    #heart-checkbox-3:checked+label .heart-icon:first-child,
-    #heart-checkbox-4:checked+label .heart-icon:first-child {
+        &:hover {
+            opacity: 0;
+        }
+    }   
+
+    .full {
         opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -239,7 +237,7 @@
             justify-content: center;
             padding-right: 0;
 
-            h1 {
+            h2 {
                 padding-right: 30px;
                 font-size: 26px;
             }

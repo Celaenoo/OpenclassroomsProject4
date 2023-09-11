@@ -223,12 +223,11 @@ p {
   margin: 30px 18px 30px 18px;
   padding-right: 60px;
 }
-.h1 input[type=checkbox] {
-  display: none;
-}
-.h1 input[type=checkbox] + label {
-  display: inline-block;
-  cursor: pointer;
+.h1 h2 {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
 }
 .h1 .heart-icons {
   position: relative;
@@ -238,24 +237,22 @@ p {
   align-items: center;
 }
 .h1 .heart-icon {
+  cursor: pointer;
   width: 30px;
   transition: opacity 1000ms;
   position: absolute;
-  top: -25px;
 }
-.h1 .empty,
-.h1 #heart-checkbox-1:checked + label .heart-icon:last-child,
-.h1 #heart-checkbox-2:checked + label .heart-icon:last-child,
-.h1 #heart-checkbox-3:checked + label .heart-icon:last-child,
-.h1 #heart-checkbox-4:checked + label .heart-icon:last-child {
+.h1 .empty {
   opacity: 1;
 }
-.h1 .full,
-.h1 #heart-checkbox-1:checked + label .heart-icon:first-child,
-.h1 #heart-checkbox-2:checked + label .heart-icon:first-child,
-.h1 #heart-checkbox-3:checked + label .heart-icon:first-child,
-.h1 #heart-checkbox-4:checked + label .heart-icon:first-child {
+.h1 .empty:hover {
   opacity: 0;
+}
+.h1 .full {
+  opacity: 0;
+}
+.h1 .full:hover {
+  opacity: 1;
 }
 
 .menu-carte {
@@ -406,7 +403,7 @@ p {
     justify-content: center;
     padding-right: 0;
   }
-  .menu-carte .h1 h1 {
+  .menu-carte .h1 h2 {
     padding-right: 30px;
     font-size: 26px;
   }
@@ -633,13 +630,6 @@ button {
 .restau-card p {
   padding-bottom: 4px;
 }
-.restau-card input[type=checkbox] {
-  display: none;
-}
-.restau-card input[type=checkbox] + label {
-  display: inline-block;
-  cursor: pointer;
-}
 .restau-card .heart-icons {
   position: relative;
   bottom: 0;
@@ -651,22 +641,19 @@ button {
   width: 30px;
   transition: opacity 1000ms;
   position: absolute;
-  top: -25px;
   right: 10px;
 }
-.restau-card .empty,
-.restau-card #heart-checkbox-1:checked + label .heart-icon:last-child,
-.restau-card #heart-checkbox-2:checked + label .heart-icon:last-child,
-.restau-card #heart-checkbox-3:checked + label .heart-icon:last-child,
-.restau-card #heart-checkbox-4:checked + label .heart-icon:last-child {
+.restau-card .empty {
   opacity: 1;
 }
-.restau-card .full,
-.restau-card #heart-checkbox-1:checked + label .heart-icon:first-child,
-.restau-card #heart-checkbox-2:checked + label .heart-icon:first-child,
-.restau-card #heart-checkbox-3:checked + label .heart-icon:first-child,
-.restau-card #heart-checkbox-4:checked + label .heart-icon:first-child {
+.restau-card .empty:hover {
   opacity: 0;
+}
+.restau-card .full {
+  opacity: 0;
+}
+.restau-card .full:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -697,7 +684,7 @@ button {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  animation: spin 2s linear infinite, hide-loader 1300ms forwards;
+  animation: spin 2s linear infinite, hide-loader 1800ms forwards;
   transition: opacity 200ms;
   opacity: 1;
 }

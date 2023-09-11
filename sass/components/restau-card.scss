@@ -37,15 +37,6 @@
         padding-bottom: 4px;
     }
 
-    input[type="checkbox"] {
-        display: none;
-    }  
-
-    input[type="checkbox"] + label {
-        display: inline-block;
-        cursor: pointer;
-    }  
-
     .heart-icons {
         position: relative;
         bottom: 0;
@@ -58,24 +49,23 @@
         width: 30px;
         transition: opacity 1000ms;
         position: absolute;
-        top: -25px; 
         right: 10px;
     }   
 
-    .empty,
-    #heart-checkbox-1:checked + label .heart-icon:last-child,
-    #heart-checkbox-2:checked + label .heart-icon:last-child,
-    #heart-checkbox-3:checked + label .heart-icon:last-child,
-    #heart-checkbox-4:checked + label .heart-icon:last-child {
+    .empty {
         opacity: 1;
+
+        &:hover {
+            opacity: 0;
+        }
     }   
 
-    .full,
-    #heart-checkbox-1:checked + label .heart-icon:first-child,
-    #heart-checkbox-2:checked + label .heart-icon:first-child,
-    #heart-checkbox-3:checked + label .heart-icon:first-child,
-    #heart-checkbox-4:checked + label .heart-icon:first-child {
+    .full {
         opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }        
     
